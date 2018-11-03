@@ -73,6 +73,8 @@ namespace UnitTest
                 return "{} is bigger than {"_sf.format(137, 42);
             };
             Assert::ExpectException<std::exception>(test5);
+
+            auto result = "{} is {} times better than ducking {}"_sf.format("Python", 137, "C++");
 		}
 
 
