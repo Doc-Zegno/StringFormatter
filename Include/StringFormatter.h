@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 #include <sstream>
 #include <cstring>
 #include <stdexcept>
@@ -27,7 +28,7 @@ namespace Handmada {
             if (*options == '\0') {
                 out << value;
             } else {
-                if (!strcmp(options, ":x")) {
+                if (!std::strcmp(options, ":x")) {
                     // Hex
                     // Remove `constexpr` below if using C++17 is not an option
                     if constexpr (std::is_integral<T>::value) {
@@ -115,9 +116,6 @@ namespace Handmada {
     /// <summary>
     /// Shorthand for `StringFormatter(pattern)`
     /// </summary>
-    StringFormatter operator"" _sf(const char* pattern, size_t size)
-    {
-        return StringFormatter(std::string(pattern, size));
-    }
+    StringFormatter operator"" _sf(const char* pattern, size_t size);
 }
 

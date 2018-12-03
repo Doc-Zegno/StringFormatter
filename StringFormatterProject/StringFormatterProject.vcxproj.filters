@@ -8,10 +8,21 @@
     <Filter Include="Include">
       <UniqueIdentifier>{ed6e939c-8c0f-4282-971a-c776ea86fc12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{c7bce36d-2804-4806-a4c1-289b1187867f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\StringFormatter.h">
       <Filter>Include</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\StringFormatter.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,11 +4,17 @@ Native implementation of C# string.Format() analog in C++. 100% Boost free
 
 
 ## How to use
-Add file `Include/StringFormatter.h` to your project.
+Add files `Include/StringFormatter.h`
+and `Source/StringFormatter.cpp` to your project.
+
+Include header file and resolve namespace `Handmada` everywhere
+you would like to use string formatting functionality.
 
 You may want to use a rather convenient shorthand with `_sf` suffix 
 instead of fully specified instantiation of `StringFormatter` class:
 ```
+using namespace Handmada;
+
 // Will produce... well, you get it right
 auto result = "{} is {} times better than ducking {}"_sf.format("Python", 137, "C++");
 ```
